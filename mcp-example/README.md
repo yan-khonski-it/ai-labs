@@ -68,3 +68,6 @@ python mcp_client.py
 ```
 
 ## Demo
+
+[Demo](./documentation/demo.log)
+![Demo](./documentation/demo.png)

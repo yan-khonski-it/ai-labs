@@ -24,6 +24,7 @@ def get_class_data(class_name: str) -> str:
     class_name = class_name + DEFAULT_CODE_TYPE
   return file_utils.read_file(DATA_LOCATION + "/" + class_name)
 
+@mcp.tool(description="Return all the code (all the classes)")
 def get_all_code() -> str:
   logging.info("Getting all code.")
   return file_utils.read_file(ALL_CODE_FILE_LOCATION)

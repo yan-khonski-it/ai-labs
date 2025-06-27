@@ -1,7 +1,7 @@
 import logging
 import ollama
 
-from ollama import ChatResponse
+from ollama import ChatResponse, chat
 
 
 OLLAMA_MODEL = "gemma3:4b"
@@ -36,10 +36,10 @@ class OllamaClient:
     if len(prompt) < LOG_PROMPT_MAX_SIZE:
       logging.info(f"Querying Ollama for prompt.\n{prompt}")
     else:
-      logging.info(f"Querying Ollama for prompt of length: {len(prompt)}.\n{prompt[:LOG_PROMPT_MAX_SIZE]}")
+      logging.info(f"Querying Ollama for prompt of length: {len(prompt)}.")
 
     try:
-      response: ChatResponse = ollama.chat(model=OLLAMA_MODEL, message=[
+      response: ChatResponse = chat(model=OLLAMA_MODEL, messages=[
         {
           "role": "user",
           "content": prompt,
