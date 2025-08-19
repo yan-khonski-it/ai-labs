@@ -1,4 +1,4 @@
-Yan: I have an engineering team described in the file: engineering-team-setup.md.
+Yan: I have an engineering team described in the file: [engineering-team-setup.md](./engineering-team-setup.md).
 You may use all the members on or not all of them. Now wait for my instructions, and we will start building a product.
 
 
