@@ -9,7 +9,7 @@ can begin gathering requirements.
 
 
 
-Yan: Now, tell me what you see on this [photo](./photos/DSC01241.JPG)?
+Yan: Now, tell me what you see in this [photo](./photos/DSC01241.JPG)?
 
 
 This photo shows a dry, rocky landscape under a bright blue sky with a few scattered clouds.
@@ -23,7 +23,7 @@ Would you like me to describe it in a way suitable for travel content (e.g., for
 
 
 
-Yan: Now, what you see on the next [photo](./photos/DSC01179.JPG)?
+Yan: Now, what you see in the next [photo](./photos/DSC01179.JPG)?
 
 
 This photo shows a rugged volcanic coastline meeting the Atlantic Ocean.
