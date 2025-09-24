@@ -18,3 +18,6 @@ Run
 ```shell
 java -jar ./target/ai-agent-example-1.0-SNAPSHOT.jar "C:\Dev\workspaces\open-source\HikariCP\src\main\java\com\zaxxer\hikari" "C:\Dev\workspaces\open-source\HikariCP-analysed"
 ```
+
+## TODO add json validator.
+## TODO finish aggregated analysis
