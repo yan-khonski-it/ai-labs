@@ -16,7 +16,7 @@ You will need source code repository checked out.
 
 Run
 ```shell
-java -jar ./target/ai-agent-example-1.0-SNAPSHOT.jar "C:\Dev\workspaces\open-source\HikariCP\src\main\java\com\zaxxer\hikari" "C:\Dev\workspaces\open-source\HikariCP-analysed"
+java -jar ./target/ai-agent-example-1.0-SNAPSHOT.jar "C:\Dev\workspaces\open-source\HikariCP\src\main\java\com\zaxxer\hikari" "C:\Dev\workspaces\open-source\HikariCP-analysed\src\main\java"
 ```
 
 ## TODO add json validator.

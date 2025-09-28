@@ -15,7 +15,7 @@ public class App {
   private final FileProcessor processor;
   private final AtomicInteger counter = new AtomicInteger(0);
 
-  public App(Path inputDir, Path outputDir, OpenAICaller caller) {
+  public App(Path inputDir, Path outputDir, Caller caller) {
     this.inputDir = inputDir;
     this.outputDir = outputDir;
     this.processor = new FileProcessor(inputDir, outputDir, caller);
@@ -31,6 +31,12 @@ public class App {
 
       @Override
       public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+        String directoryName = dir.getFileName().toString();
+        if (Filter.isDirectoryExcluded(directoryName)) {
+          System.out.printf("Skipping directory: %s.\n", directoryName);
+          return FileVisitResult.SKIP_SUBTREE;
+        }
+
         Path rel = inputDir.relativize(dir);
         Files.createDirectories(outputDir.resolve(rel));
         return FileVisitResult.CONTINUE;
@@ -38,9 +44,13 @@ public class App {
 
       @Override
       public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        if (Filter.isFileExcluded(file.getFileName().toString())) {
+          return FileVisitResult.CONTINUE;
+        }
+
         if (attrs.isRegularFile()) {
           try {
-            processor.process(file, attrs);
+            processor.process(file);
             counter.incrementAndGet();
           } catch (Exception e) {
             System.err.println("ERROR processing " + file + ": " + e.getMessage());
