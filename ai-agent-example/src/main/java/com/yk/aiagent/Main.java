@@ -24,7 +24,7 @@ public class Main {
 
     OpenAICaller caller1 = new OpenAICaller(openAiApiKey);
     OllamaCaller  caller2 = new OllamaCaller("gemma3:12b");
-    App app = new App(inputDir, outputDir, caller2);
+    App app = new App(inputDir, outputDir, caller1);
     app.run();
   }
 }
